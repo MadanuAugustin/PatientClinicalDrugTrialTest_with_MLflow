@@ -19,4 +19,5 @@ COLUMNS :
 
 
 TARGET_COLUMN :
-  name : Recovery
+  name_1 : cured3mnths
+  name_2 : cured9mnths

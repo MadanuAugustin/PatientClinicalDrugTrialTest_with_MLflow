@@ -37,3 +37,18 @@ class DataTransformationConfig:
     local_data_file : Path
     train_path : Path
     test_path : Path
+
+
+
+
+#################################### MODEL-TRAINER-CONFIG ################################
+
+
+@dataclass(frozen=True)
+class ModelTrainerConfig:
+    root_dir : Path
+    train_data_path : Path
+    test_data_path : Path
+    model_name : str
+    target_column_1 : str
+    target_column_2 : str

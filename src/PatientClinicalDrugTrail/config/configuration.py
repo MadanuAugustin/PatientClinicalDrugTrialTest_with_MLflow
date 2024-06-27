@@ -1,6 +1,7 @@
 from src.PatientClinicalDrugTrail.constants import *
 from src.PatientClinicalDrugTrail.utils.common import read_yaml, create_directories
-from src.PatientClinicalDrugTrail.entity.config_entity import (DataIngestionConfig, DataValidationConfig, DataTransformationConfig)
+from src.PatientClinicalDrugTrail.entity.config_entity import (DataIngestionConfig, DataValidationConfig, DataTransformationConfig,
+                                                               ModelTrainerConfig)
 from src.PatientClinicalDrugTrail.logger_file.logger_obj import logger
 
 
@@ -66,3 +67,23 @@ class ConfigurationManager:
     
 
         return data_transformation_config
+    
+
+
+    def get_model_trainer_config(self) -> ModelTrainerConfig:
+        
+        config = self.config.model_trainer
+        schema = self.schema.TARGET_COLUMN
+
+        create_directories([config.root_dir])
+
+        model_trainer_config = ModelTrainerConfig(
+            root_dir = config.root_dir,
+            train_data_path= config.train_data_path,
+            test_data_path= config.test_data_path,
+            model_name= config.model_name,
+            target_column_1 = schema.name_1,
+            target_column_2 = schema.name_2
+        )
+
+        return model_trainer_config
