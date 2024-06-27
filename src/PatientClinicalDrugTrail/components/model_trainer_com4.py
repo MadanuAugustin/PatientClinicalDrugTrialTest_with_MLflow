@@ -25,16 +25,12 @@ class ModelTrainer:
 
         train_y = pd.DataFrame(np.column_stack([target_train_1, target_train_2]))
 
-        print(train_y.head())
-
         test_x = test_data.drop([self.config.target_column_1, self.config.target_column_2], axis = 1)
 
         target_test_1 = test_data[[self.config.target_column_1]]
         target_test_2 = test_data[[self.config.target_column_2]]
 
         test_y = pd.DataFrame(np.column_stack([target_test_1, target_test_2]))
-
-        print(test_y.head())
 
         base_classifier = RandomForestClassifier()
 

@@ -1,7 +1,7 @@
 from src.PatientClinicalDrugTrail.constants import *
 from src.PatientClinicalDrugTrail.utils.common import read_yaml, create_directories
 from src.PatientClinicalDrugTrail.entity.config_entity import (DataIngestionConfig, DataValidationConfig, DataTransformationConfig,
-                                                               ModelTrainerConfig)
+                                                               ModelTrainerConfig, ModelEvaluationConfig)
 from src.PatientClinicalDrugTrail.logger_file.logger_obj import logger
 
 
@@ -87,3 +87,24 @@ class ConfigurationManager:
         )
 
         return model_trainer_config
+    
+
+    def get_model_evaluation_config(self) -> ModelEvaluationConfig:
+        config = self.config.model_evaluation
+        params = self.params.RandomForestClassifier
+        schema = self.schema.TARGET_COLUMN
+
+        create_directories([config.root_dir])
+
+        model_evaluation_config = ModelEvaluationConfig(
+            root_dir = config.root_dir,
+            test_data_path= config.test_data_path,
+            model_path = config.model_path,
+            all_params= params,
+            metric_file_name=config.metric_file_name,
+            target_column_1=schema.name_1,
+            target_column_2=schema.name_2,
+            mlflow_uri="https://dagshub.com/augustin7766/PatientClinicalDrugTrialTest_with_MLflow.mlflow"
+        )
+
+        return model_evaluation_config

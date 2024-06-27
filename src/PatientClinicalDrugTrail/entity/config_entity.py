@@ -52,3 +52,18 @@ class ModelTrainerConfig:
     model_name : str
     target_column_1 : str
     target_column_2 : str
+
+
+#################################### MODEL-EVALUATION-CONFIG ################################
+
+
+@dataclass(frozen=True)
+class ModelEvaluationConfig:
+    root_dir : Path
+    test_data_path : Path
+    model_path : Path
+    metric_file_name : Path
+    all_params : dict
+    target_column_1 : str
+    target_column_2 : str
+    mlflow_uri : str

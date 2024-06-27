@@ -2,4 +2,11 @@
 
 
 
-key : val
+
+
+
+RandomForestClassifier:
+  n_estimators : 40
+  criterion : 'log_loss'
+  max_depth : None
+  n_jobs : -1
