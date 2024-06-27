@@ -1,0 +1,22 @@
+
+
+
+COLUMNS :
+  PatientID                                 :  int64
+  Sex                                       : object
+  Age                                       :  int64
+  HB_score                                  :  int64
+  timeOfTreatment                           : object
+  Treatment_group                           : object
+  got_Prednisolone                          : object
+  got_Acyclovir                             : object
+  HB_score_3mnths                           :  int64
+  cured3mnths                               : object
+  HB_score_9mnths                           :  int64
+  cured9mnths                               : object
+
+
+
+
+TARGET_COLUMN :
+  name : Recovery
