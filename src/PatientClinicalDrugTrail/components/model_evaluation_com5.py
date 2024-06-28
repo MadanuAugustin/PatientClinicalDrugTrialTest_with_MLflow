@@ -50,7 +50,7 @@ class ModelEvaluation:
         os.environ["MLFLOW_TRACKING_USERNAME"]="augustin7766"
         os.environ["MLFLOW_TRACKING_PASSWORD"]="8a01ee4bec043666cf3ced22edc7d308526b4b42"
 
-        mlflow.set_experiment('exp_fourth_04_target_02')
+        mlflow.set_experiment('exp_fifth_05_target_02')
 
         with mlflow.start_run():
 

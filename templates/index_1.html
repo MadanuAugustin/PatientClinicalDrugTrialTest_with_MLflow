@@ -10,10 +10,8 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #d1f7c4;
-            /* Light green background */
-            color: #1f3a93;
-            /* Dark blue text */
+            background-color: #0d1117;
+            color: #f0f0f0;
             margin: 0;
             padding: 0;
         }
@@ -22,16 +20,16 @@
             max-width: 400px;
             margin: 50px auto;
             padding: 20px;
-            background-color: #f4d03f;
-            /* Yellow background */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #21262d;
+            /* Slightly lighter dark color */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             border-radius: 5px;
         }
 
         h1 {
             text-align: center;
-            color: #1f3a93;
-            /* Dark blue text */
+            color: #f0f0f0;
+            /* Light blue color */
             font-size: 28px;
             font-weight: 700;
         }
@@ -47,8 +45,8 @@
         label {
             display: block;
             margin-bottom: 5px;
-            color: #1f3a93;
-            /* Dark blue text */
+            color: #f0f0f0;
+            /* Light blue color */
             font-weight: bold;
             font-size: 16px;
         }
@@ -57,46 +55,42 @@
             width: 100%;
             padding: 10px;
             box-sizing: border-box;
-            border: 1px solid #9b59b6;
-            /* Purple border */
+            border: 1px solid #30363d;
             border-radius: 4px;
-            background-color: #ffebcd;
-            /* Blanched almond background */
-            color: #1f3a93;
-            /* Dark blue text */
+            background-color: #273549;
+            /* Soft cool blue background */
+            color: #c9d1d9;
             font-size: 14px;
             line-height: 1.5;
+            /* Adjust line height to fit placeholder text */
         }
 
         .form-control::placeholder {
-            color: #9b59b6;
-            /* Purple placeholder text */
+            color: #8b949e;
         }
 
         .form-control:focus {
-            border-color: #ff6347;
-            /* Tomato border on focus */
+            border-color: #58a6ff;
             outline: none;
-            background-color: #ffe4b5;
-            /* Moccasin background on focus */
+            background-color: #1a2b3c;
+            /* Darker blue background on focus */
         }
 
         select.form-control,
         input.form-control {
             height: auto;
             padding: 8px 10px;
+            /* Adjust padding to fit placeholder text */
         }
 
         .form-control option.placeholder {
-            color: #9b59b6;
-            /* Purple option placeholder text */
+            color: #8b949e;
+            /* Make placeholder color similar to input placeholder */
         }
 
         .btn-primary {
-            background-color: #ff6347;
-            /* Tomato background */
+            background-color: #58a6ff;
             color: #fff;
-            /* White text */
             border: none;
             padding: 10px 15px;
             font-size: 16px;
@@ -107,15 +101,14 @@
         }
 
         .btn-primary:hover {
-            background-color: #e74c3c;
-            /* Darker tomato on hover */
+            background-color: #1e6fb8;
         }
 
         h2 {
             text-align: center;
             margin-top: 20px;
-            color: #1f3a93;
-            /* Dark blue text */
+            color: #f0f0f0;
+            /* White color */
             font-size: 22px;
             font-weight: 700;
         }
@@ -151,7 +144,7 @@
             <div class="mb-3">
                 <label class="form-label">Time of Treatment</label>
                 <select class="form-control" name="timeOfTreatment" required>
-                    <option class="placeholder" selected disabled value="">Time of Treatment</option>
+                    <option class="placeholder" selected disabled value="">Enter the Time of Treatment</option>
                     <option value="Within 24 hr">Within 24 hr</option>
                     <option value=">24 to ≤48 hr">>24 to ≤48 hr</option>
                     <option value=">48 to ≤72 hr">>48 to ≤72 hr</option>

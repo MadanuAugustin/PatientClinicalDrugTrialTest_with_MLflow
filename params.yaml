@@ -6,7 +6,7 @@
 
 
 RandomForestClassifier:
-  n_estimators : 40
-  criterion : 'log_loss'
+  n_estimators : 30
+  criterion : 'gini'
   max_depth : None
   n_jobs : -1
